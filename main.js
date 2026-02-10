@@ -141,7 +141,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (isValid) {
         showSuccessMessage();
-        contactForm.reset();
+        
+        // Espera 2 segundos e envia os dados de verdade
+        setTimeout(() => {
+          contactForm.submit();
+        }, 2000);
       }
     });
 
