@@ -167,6 +167,18 @@ p {
   background-color: var(--color-gray-dark);
 }
 
+/* CTA Section with Background Image */
+.section-cta-bg {
+  background-image: linear-gradient(rgba(139, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('img/indeximage.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-color: var(--color-black-bg);
+  position: relative;
+  padding: var(--spacing-2xl) 0;
+}
+
 /* Grid System */
 .grid {
   display: grid;

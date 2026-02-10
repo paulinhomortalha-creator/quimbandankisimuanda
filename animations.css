@@ -397,6 +397,104 @@
     animation: gradientShift 15s ease infinite;
 }
 
+/* Hero Background Image Animations */
+@keyframes heroZoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes heroPan {
+    0% {
+        transform: scale(1.08) translate(0, 0);
+    }
+
+    25% {
+        transform: scale(1.08) translate(-1.5%, -1%);
+    }
+
+    50% {
+        transform: scale(1.1) translate(-2%, 0);
+    }
+
+    75% {
+        transform: scale(1.08) translate(-1%, 1%);
+    }
+
+    100% {
+        transform: scale(1.08) translate(0, 0);
+    }
+}
+
+@keyframes heroOverlayPulse {
+
+    0%,
+    100% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Hero animated background container */
+.hero-bg-animated {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hero-bg-animated img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    animation: heroPan 25s ease-in-out infinite;
+    display: block;
+    filter: brightness(0.85) contrast(1.1) saturate(1.15);
+    transition: filter 1s ease;
+}
+
+/* Overlay animado por cima da imagem */
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%),
+        linear-gradient(135deg,
+            rgba(10, 10, 10, 0.65) 0%,
+            rgba(139, 0, 0, 0.5) 50%,
+            rgba(10, 10, 10, 0.65) 100%);
+    z-index: 1;
+    animation: heroOverlayPulse 8s ease-in-out infinite;
+}
+
+/* Variante: zoom lento */
+.hero-bg-animated.zoom-effect img {
+    animation: heroZoom 20s ease-in-out infinite;
+}
+
+/* Variante: pan cinematográfico */
+.hero-bg-animated.pan-effect img {
+    animation: heroPan 25s ease-in-out infinite;
+}
+
 /* ========================================
    Text Animations
    ======================================== */
