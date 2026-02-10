@@ -1,0 +1,443 @@
+/* ========================================
+   Terreiro Nkosimuanda - Components
+   ======================================== */
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-family: var(--font-heading);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width var(--transition-slow), height var(--transition-slow);
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary {
+    background: var(--color-red-deep);
+    border-color: var(--color-red-bright);
+    color: var(--color-white);
+    box-shadow: var(--shadow-red-glow);
+}
+
+.btn-primary:hover {
+    background: var(--color-red-bright);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-red-glow-strong);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: transparent;
+    border-color: var(--color-red-bright);
+    color: var(--color-red-bright);
+}
+
+.btn-secondary:hover {
+    background: var(--color-red-bright);
+    color: var(--color-white);
+    box-shadow: var(--shadow-red-glow);
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    border-color: #128C7E;
+    color: var(--color-white);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-large {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--font-size-base);
+}
+
+/* ========================================
+   Cards
+   ======================================== */
+
+.card {
+    background: var(--color-gray-dark);
+    border: 1px solid var(--color-gray-medium);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--color-red-deep), var(--color-red-bright));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-normal);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg), var(--shadow-red-glow);
+    border-color: var(--color-red-deep);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    color: var(--color-red-crimson);
+    margin-bottom: var(--spacing-sm);
+}
+
+.card-text {
+    color: var(--color-gray-text);
+    line-height: 1.7;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-red-bright);
+    font-size: 2.5rem;
+}
+
+/* ========================================
+   Hero Section
+   ======================================== */
+
+.hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-black-bg) 0%, var(--color-red-deep) 100%);
+    overflow: hidden;
+    padding: var(--spacing-3xl) 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(220, 20, 60, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(139, 0, 0, 0.1) 0%, transparent 50%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 var(--spacing-lg);
+}
+
+.hero-title {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-md);
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-body);
+    font-weight: 300;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-description {
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.8;
+    animation: fadeInUp 1.2s ease;
+}
+
+.hero-cta {
+    animation: fadeInUp 1.4s ease;
+}
+
+/* Hero with Background Image */
+.hero-with-background {
+    min-height: 50vh;
+    background-image: url('img/terreiro-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-with-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Imagem de fundo */
+    background-image: url('img/sacerdote-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Gradiente overlay por cima da imagem */
+    background-image:
+        linear-gradient(135deg,
+            rgba(10, 10, 10, 0.85) 0%,
+            rgba(139, 0, 0, 0.75) 50%,
+            rgba(10, 10, 10, 0.85) 100%),
+        url('img/sacerdote-background.jpeg');
+    background-size: cover, contain;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    z-index: 1;
+}
+
+.hero-with-background .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ========================================
+   Forms
+   ======================================== */
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: var(--spacing-sm);
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+    background: var(--color-gray-dark);
+    border: 2px solid var(--color-gray-medium);
+    border-radius: 4px;
+    transition: all var(--transition-normal);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--color-red-bright);
+    box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.2);
+    background: var(--color-gray-medium);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #666;
+}
+
+.form-error {
+    color: var(--color-red-bright);
+    font-size: var(--font-size-xs);
+    margin-top: var(--spacing-xs);
+    display: none;
+}
+
+.form-input.error,
+.form-textarea.error {
+    border-color: var(--color-red-bright);
+}
+
+.form-input.error+.form-error,
+.form-textarea.error+.form-error {
+    display: block;
+}
+
+/* ========================================
+   Mystical Icons (CSS/SVG)
+   ======================================== */
+
+.icon-trident {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.icon-trident::before,
+.icon-trident::after {
+    content: '';
+    position: absolute;
+    background: currentColor;
+}
+
+.icon-trident::before {
+    width: 3px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon-trident::after {
+    width: 80%;
+    height: 3px;
+    top: 5px;
+    left: 10%;
+}
+
+.icon-flame {
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    background: linear-gradient(to top, var(--color-red-deep), var(--color-red-bright));
+    clip-path: polygon(50% 0%, 70% 30%, 100% 100%, 0% 100%, 30% 30%);
+    animation: flicker 2s infinite;
+}
+
+/* ========================================
+   Section Headers
+   ======================================== */
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.section-title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-red-bright);
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--color-red-bright), transparent);
+}
+
+.section-subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-gray-text);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: var(--spacing-lg);
+}
+
+/* ========================================
+   Dividers
+   ======================================== */
+
+.divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--color-red-deep), transparent);
+    margin: var(--spacing-xl) 0;
+}
+
+/* ========================================
+   Image Containers
+   ======================================== */
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+}

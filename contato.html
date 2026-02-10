@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Entre em contato com o Terreiro Nkosimuanda - Formulário de contato, WhatsApp e informações para agendar consultas.">
+    <title>Contato - Terreiro Nkosimuanda</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="mp4/logo.gif" alt="Logo" class="logo-img">
+                    Nkosimuanda
+                </div>
+
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Início</a></li>
+                    <li><a href="sobre-sacerdote.html" class="nav-link">O Sacerdote</a></li>
+                    <li><a href="sobre-terreiro.html" class="nav-link">O Terreiro</a></li>
+                    <li><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+            <h1 class="hero-title">Entre em Contato</h1>
+            <p class="hero-subtitle">Estamos aqui para auxiliá-lo em sua jornada espiritual</p>
+        </div>
+    </section>
+
+    <!-- Contact Methods Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="grid grid-3">
+                <div class="card scroll-reveal delay-1 text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
+                    <h3 class="card-title">WhatsApp</h3>
+                    <p class="card-text">
+                        (11) 99999-9999<br>
+                        Resposta rápida e direta
+                    </p>
+                    <a href="https://wa.me/5515996734345?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Terreiro%20Nkosimuanda"
+                        class="btn btn-whatsapp" target="_blank" rel="noopener" style="margin-top: 1rem;">
+                        Abrir WhatsApp
+                    </a>
+                </div>
+
+                <div class="card scroll-reveal delay-2 text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📧</div>
+                    <h3 class="card-title">Email</h3>
+                    <p class="card-text">
+                        contato@Nkosimuanda.com.br<br>
+                        Respondemos em até 24h
+                    </p>
+                    <a href="mailto:contato@Nkosimuanda.com.br" class="btn btn-secondary" style="margin-top: 1rem;">
+                        Enviar Email
+                    </a>
+                </div>
+
+                <div class="card scroll-reveal delay-3 text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⏰</div>
+                    <h3 class="card-title">Horário</h3>
+                    <p class="card-text">
+                        Segunda a Sexta<br>
+                        10:00 às 18:00<br>
+                        Sábados: sob agendamento
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">Formulário de Contato</h2>
+                <p class="section-subtitle">
+                    Preencha o formulário abaixo e entraremos em contato em breve
+                </p>
+            </div>
+
+            <div style="max-width: 700px; margin: 0 auto;">
+                <form id="contact-form" class="scroll-reveal">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nome Completo *</label>
+                        <input type="text" id="name" name="name" class="form-input"
+                            placeholder="Digite seu nome completo" required>
+                        <span class="form-error">Por favor, insira seu nome</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input"
+                            placeholder="seu.email@exemplo.com" required>
+                        <span class="form-error">Por favor, insira um email válido</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Telefone / WhatsApp *</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(11) 99999-9999"
+                            required>
+                        <span class="form-error">Por favor, insira seu telefone</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Assunto</label>
+                        <select id="subject" name="subject" class="form-select">
+                            <option value="">Selecione um assunto</option>
+                            <option value="consulta">Agendar Consulta</option>
+                            <option value="informacao">Solicitar Informações</option>
+                            <option value="trabalho">Trabalho Espiritual</option>
+                            <option value="iniciacao">Iniciação / Desenvolvimento</option>
+                            <option value="outro">Outro Assunto</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensagem *</label>
+                        <textarea id="message" name="message" class="form-textarea"
+                            placeholder="Escreva sua mensagem aqui..." required></textarea>
+                        <span class="form-error">Por favor, insira sua mensagem</span>
+                    </div>
+
+                    <div class="form-group">
+                        <p style="font-size: 0.875rem; color: #999; margin-bottom: 1rem;">
+                            * Campos obrigatórios<br>
+                            Seus dados serão mantidos em total confidencialidade
+                        </p>
+
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                            Enviar Mensagem
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location and Info Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">Informações Adicionais</h2>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card scroll-reveal-left">
+                    <h3 class="card-title">📍 Localização</h3>
+                    <p class="card-text">
+                        <strong>Terreiro Nkosimuanda</strong><br>
+                        São Paulo - SP<br>
+                        Brasil<br><br>
+                        <em>O endereço completo é fornecido após o primeiro contato para agendamento.</em>
+                    </p>
+                </div>
+
+                <div class="card scroll-reveal-right">
+                    <h3 class="card-title">ℹ️ Como Funciona</h3>
+                    <p class="card-text">
+                        1. Entre em contato por WhatsApp, email ou formulário<br>
+                        2. Agende um horário para consulta ou conversa inicial<br>
+                        3. Compareça no horário marcado<br>
+                        4. Receba orientação e esclarecimentos<br>
+                        5. Caso necessário, agendamos trabalhos específicos
+                    </p>
+                </div>
+
+                <div class="card scroll-reveal-left">
+                    <h3 class="card-title">💰 Valores e Investimento</h3>
+                    <p class="card-text">
+                        Os valores variam conforme o tipo de consulta ou trabalho solicitado.
+                        Trabalhamos com transparência e justiça, considerando os materiais necessários
+                        e o tempo dedicado. Informamos todos os valores antes de qualquer compromisso.
+                    </p>
+                </div>
+
+                <div class="card scroll-reveal-right">
+                    <h3 class="card-title">🔒 Confidencialidade</h3>
+                    <p class="card-text">
+                        Todos os atendimentos são sigilosos. Suas informações pessoais e os assuntos
+                        tratados durante consultas e trabalhos espirituais são mantidos em total
+                        confidencialidade, respeitando sua privacidade.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="card scroll-reveal delay-1">
+                    <h3 class="card-title">Preciso agendar com antecedência?</h3>
+                    <p class="card-text">
+                        Sim, recomendamos agendar com pelo menos 48 horas de antecedência para garantir
+                        disponibilidade. Em casos urgentes, entre em contato pelo WhatsApp.
+                    </p>
+                </div>
+
+                <div class="card scroll-reveal delay-2">
+                    <h3 class="card-title">Atende em quais dias?</h3>
+                    <p class="card-text">
+                        Atendemos de segunda a sexta-feira, das 10h às 18h. Aos sábados realizamos
+                        atendimentos sob agendamento prévio. Domingos reservados para rituais internos.
+                    </p>
+                </div>
+
+                <div class="card scroll-reveal delay-3">
+                    <h3 class="card-title">Posso levar acompanhante?</h3>
+                    <p class="card-text">
+                        Sim, você pode trazer um acompanhante se isso o deixar mais confortável.
+                        No entanto, a consulta em si é individual para manter a privacidade.
+                    </p>
+                </div>
+
+                <div class="card scroll-reveal delay-4">
+                    <h3 class="card-title">Como é a primeira consulta?</h3>
+                    <p class="card-text">
+                        Na primeira consulta, fazemos uma conversa inicial para entender suas necessidades,
+                        realizamos um jogo de búzios ou outro oráculo para orientação espiritual e
+                        explicamos possíveis encaminhamentos. Tudo com calma e respeito.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section section-dark text-center">
+        <div class="container">
+            <div class="scroll-scale">
+                <h2>Pronto para Iniciar Sua Jornada?</h2>
+                <p class="text-white" style="max-width: 600px; margin: 0 auto; margin-bottom: 2rem;">
+                    Entre em contato agora mesmo pelo WhatsApp e receba orientação espiritual
+                </p>
+                <a href="https://wa.me/5515996734345?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20no%20Terreiro%20Nkosimuanda"
+                    class="btn btn-whatsapp btn-large animate-pulse" target="_blank" rel="noopener">
+                    📱 Falar no WhatsApp Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Terreiro Nkosimuanda</h3>
+                    <p>
+                        Um espaço sagrado de tradição, força e espiritualidade dedicado à prática
+                        autêntica da Quimbanda.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre-sacerdote.html">O Sacerdote</a></li>
+                        <li><a href="sobre-terreiro.html">O Terreiro</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>Email: contato@Nkosimuanda.com.br</p>
+                    <p>WhatsApp: (11) 99999-9999</p>
+                    <p>Atendimento: Segunda a Sexta, 10h às 18h</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Terreiro Nkosimuanda. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
